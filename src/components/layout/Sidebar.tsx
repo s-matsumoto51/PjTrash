@@ -3,6 +3,7 @@
 import { componentStyles } from "@/styles";
 import { Box, CloseButton, VStack, Button, Text, Input } from "@chakra-ui/react";
 import { useState } from 'react';
+import { Date } from "../date/date";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -72,15 +73,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           )}
 
           {selectedTab === 'data' && (
-            <VStack gap={3} align="stretch">
-              <Text mb={2}> 日時選択</Text>
-              <Input
-                type="datetime-local" 
-                size="sm"
-                borderRadius="12px"
+            <Date/>
+            // <VStack gap={3} align="stretch">
+            //   <Text mb={2}> 日時選択</Text>
+            //   <Input
+            //     type="datetime-local" 
+            //     size="sm"
+            //     borderRadius="12px"
                 
-              />
-            </VStack>
+            //   />
+            // </VStack>
           )}
         </Box>
       </VStack>
