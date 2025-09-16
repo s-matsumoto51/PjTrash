@@ -1,13 +1,19 @@
 'use client';
 
 import { Box, Spinner, Text, VStack } from "@chakra-ui/react";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { componentStyles } from "@/styles";
-import { useGoogleMap } from "@/hooks/useGoogleMap";
+import { useMapStore } from "@/stores/mapStore";
 
 export const SatelliteMap = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const {isLoading,error} = useGoogleMap(ref)
+  const { isLoading, error, loadMap, selectItem } = useMapStore();
+
+  useEffect(() => {
+    if (ref.current) {
+      loadMap(ref);
+    }
+  }, [loadMap, selectItem]);
 
   // エラー表示
   if (error) {

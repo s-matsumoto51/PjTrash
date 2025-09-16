@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Button } from "@chakra-ui/react";
-import { Sidebar } from "@/components/layout";
+import { Sidebar } from "@/components/sidebar";
 import { SatelliteMap } from "@/components/maps";
 import { useMapStore } from "@/stores/mapStore";
 
@@ -10,12 +10,12 @@ export default function Home() {
 
 
   return (
-    <Box display="flex" width="100vw" height="100vh">
+    <Box display="flex" width="100vw" height="100vh" suppressHydrationWarning>
       {/* 地図エリア */}
       <Box
         width="100%"
         height="100%"
-        marginLeft={isSidebarOpen ? "320px" : "0"}
+        marginLeft={isSidebarOpen ? { base: "0", md: "320px", lg: "350px" } : "0"}
         transition="margin-left 0.3s ease"
       >
         <SatelliteMap />

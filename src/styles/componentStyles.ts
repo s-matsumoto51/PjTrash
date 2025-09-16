@@ -46,7 +46,7 @@ export const componentStyles = {
   // Sidebarコンポーネント用スタイル
   sidebar: {
     container: {
-      width: '320px', // Chakra UIのプロパティ
+      width: { base: "100%", md: "320px", lg: "320px" },
       height: '100vh',  // Chakra UIのプロパティ
       position: 'fixed',
       bg: 'linear-gradient(135deg, #f5f7fa 0%, #e8ebefff 100%)',
@@ -98,19 +98,9 @@ export const componentStyles = {
 
     // ナビゲーションボタンのバリエーション
     navButtonBlue: {
-      bg: 'rgba(74, 144, 226, 0.1)',
-      _hover: {
-        bg: 'rgba(74, 144, 226, 0.15)',
-        transform: 'translateX(4px)',
-      },
     } as ChakraButtonProps,
 
     navButtonGreen: {
-      bg: 'rgba(72, 187, 120, 0.1)',
-      _hover: {
-        bg: 'rgba(72, 187, 120, 0.15)',
-        transform: 'translateX(4px)',
-      },
     } as ChakraButtonProps,
 
     divider: {

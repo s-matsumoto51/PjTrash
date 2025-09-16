@@ -1,0 +1,85 @@
+/* ================================
+   Calendar / DatePicker Styles
+   ================================ */
+/* DatePicker のラッパーを親幅に合わせる */
+.react-datepicker-wrapper {
+  width: 100%; 
+}
+
+/* カレンダーのポップアップ設定 */
+.date-picker-popper {
+  width: 100%;
+}
+
+/* カレンダー全体のレイアウト - Timeが横に表示されるよう十分な幅を確保 */
+.react-datepicker {
+  width: 290px !important;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* 月カレンダー部分のコンテナ */
+.react-datepicker__month-container {
+  width: 200px !important;
+}
+
+/* 月部分の調整 */
+.react-datepicker__month {
+  width: 100% !important;
+  margin: 4px !important;
+}
+
+/* 日付セルのサイズ調整 */
+.react-datepicker__day {
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+  line-height: 1.2rem !important;
+  margin: 0.1rem !important;
+  font-size: 10px !important;
+}
+
+/* 曜日ヘッダーの調整 */
+.react-datepicker__day-names {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5px;
+}
+
+.react-datepicker__day-name {
+  width: 1.2rem !important;
+  margin: 0.1rem !important;
+  font-size: 9px !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 週のレイアウト調整 */
+.react-datepicker__week {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 5px;
+}
+
+/* Timeコンテナ - 横に表示される設定 */
+.react-datepicker__time-container {
+  width: 90px !important; 
+}
+
+.react-datepicker__time-list {
+  height: 180px !important;
+}
+
+
